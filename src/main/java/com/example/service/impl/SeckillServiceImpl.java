@@ -84,7 +84,7 @@ public class SeckillServiceImpl implements SeckillService {
      */
     public SeckillExecution executeSeckill(long seckillId, long userPhone, String md5) throws SeckillException, RepeatKillException, CloseKillException {
         if (md5 == null || !md5.equals(getMd5Str(seckillId))) {
-            throw new SeckillException("md5 error"); //TODO
+            throw new SeckillException("md5 error");
         }
         //先写正常流程逻辑
         try {
